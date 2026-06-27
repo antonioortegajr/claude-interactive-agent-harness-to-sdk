@@ -1,0 +1,9 @@
+# Expert manifest. The triage registry reads this to build its routing table.
+# Copy this file (and the whole _template directory) to start a new expert.
+name: _template
+domain: example
+description: >-
+  Generic example expert used as a template. Replace with a real domain when
+  copying. Handles "example symptom" issues to demonstrate the contract.
+version: 0.1.0
+status: experimental   # experimental | proven | deprecated
