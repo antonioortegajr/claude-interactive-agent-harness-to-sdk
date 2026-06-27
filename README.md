@@ -3,6 +3,11 @@
 A **triage harness**: grow expertise during interactive development, then promote
 that knowledge into autonomous, callable agents.
 
+> **A reference implementation, not a product.** It illustrates the pattern
+> (triage router + promotable experts + playbooks/skills/scripts). **Fork it or
+> use it as a GitHub template, then build your own domains** — there's no package
+> to install and no upstream to track. Copy the `_template` expert to start.
+
 - A **triage agent** is a *pure router* — it classifies an issue, picks an
   expert, calls it, and relays the answer. It holds no domain fixes itself.
 - An **expert** is the unit of knowledge and the unit of promotion. It owns its
@@ -58,7 +63,8 @@ relay the JSON answer.
 
 ```bash
 cp -r experts/_template experts/<your-domain>
-# edit expert.yaml, point __main__.py at experts.<your-domain>, write real
+# then, in the copy: set name in expert.yaml, EXPERT_NAME in expert.py, and the
+# module path in __main__.py to experts.<your-domain>; write real
 # playbooks/skills/scripts — see docs/AUTHORING.md
 ```
 
